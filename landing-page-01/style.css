@@ -1,0 +1,155 @@
+body {
+  color: #1e364f;
+}
+
+header {
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header-left {
+  display: flex;
+  align-items: center;
+}
+header .logo {
+  padding-right: 4rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #1e364f;
+}
+header .logo:visited {
+  color: #1e364f;
+}
+header .menu {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-left: 2rem;
+  position: relative;
+}
+header .menu::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 3rem;
+  background-color: #eee;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+header .menu__item {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #5b6066;
+}
+header .menu__item:visited {
+  color: #5b6066;
+}
+header .menu__item--button {
+  color: #1e364f;
+  border: 2px solid #1e364f;
+  border-radius: 1rem;
+  box-shadow: 0 3px 0 0 rgba(30, 54, 79, 0.3);
+}
+header .menu__item--button:visited {
+  color: #1e364f;
+}
+header .sign-in {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+header .sign-in__item {
+  padding: 1rem 1.8rem;
+}
+header .sign-in__login {
+  color: #1e364f;
+}
+header .sign-in__login:visited {
+  color: #1e364f;
+}
+header .sign-in__signup {
+  color: white;
+  background-color: #6c64ea;
+  border-radius: 1rem;
+}
+header .sign-in__signup:visited {
+  color: white;
+}
+
+main {
+  max-width: 110rem;
+  padding: 0 5rem;
+  padding-bottom: 10rem;
+  margin: 0 auto;
+}
+main .title {
+  width: 100%;
+  text-align: center;
+  margin-top: 5rem;
+}
+main .title__main {
+  font-size: 5.2rem;
+  width: 60rem;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+main .title__desc {
+  margin-top: 1rem;
+}
+main .price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rem;
+}
+main .price__item {
+  width: 23rem;
+  height: 15rem;
+  border-radius: 1rem;
+  background-color: #acbce7;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .price__item--green {
+  background-color: rgba(50, 207, 50, 0.2);
+}
+main .price__item--blue {
+  background-color: rgba(51, 146, 255, 0.2);
+}
+main .price__item--violet {
+  background-color: rgba(238, 130, 238, 0.2);
+}
+main .price__percent {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  color: green;
+  font-weight: 500;
+  padding-right: 2.5rem;
+}
+main .price__percent::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 1rem solid green;
+  right: 0;
+  top: 0;
+  transform: translateY(70%);
+}
+main .price__main {
+  font-size: 5.2rem;
+  font-weight: 500;
+  height: 6rem;
+  margin-bottom: 1px;
+}
+main .price.__desc {
+  margin-top: -1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

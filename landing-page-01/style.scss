@@ -1,0 +1,159 @@
+$text-color-main: #1e364f;
+$text-color-blur: #5b6066;
+$background-color-button: #6c64ea;
+
+@mixin set-color-a($color) {
+  color: $color;
+  &:visited {
+    color: $color;
+  }
+}
+
+body {
+  color: $text-color-main;
+}
+
+header {
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    padding-right: 4rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    @include set-color-a($text-color-main);
+  }
+  .menu {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-left: 2rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 3rem;
+      background-color: #eee;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &__item {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      color: $text-color-blur;
+      &:visited {
+        color: $text-color-blur;
+      }
+      &--button {
+        color: $text-color-main;
+        border: 2px solid $text-color-main;
+        border-radius: 1rem;
+        box-shadow: 0 3px 0 0 rgba($text-color-main, 0.3);
+        &:visited {
+          color: $text-color-main;
+        }
+      }
+    }
+  }
+  .sign-in {
+    font-size: 1.4rem;
+    font-weight: 500;
+    &__item {
+      padding: 1rem 1.8rem;
+    }
+    &__login {
+      @include set-color-a($text-color-main);
+    }
+    &__signup {
+      @include set-color-a(white);
+      background-color: $background-color-button;
+      border-radius: 1rem;
+    }
+  }
+}
+
+main {
+  max-width: 110rem;
+  padding: 0 5rem;
+  padding-bottom: 10rem;
+  margin: 0 auto;
+
+  .title {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+
+    &__main {
+      font-size: 5.2rem;
+      width: 60rem;
+      margin: 0 auto;
+      line-height: 1.2;
+    }
+    &__desc {
+      margin-top: 1rem;
+    }
+  }
+  .price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+    
+    &__item {
+      width: 23rem;
+      height: 15rem;
+      border-radius: 1rem;
+      background-color: rgb(172, 188, 231);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &--green {
+        background-color: rgba(50, 207, 50, 0.2);
+      }
+      &--blue {
+        background-color: rgba(51, 146, 255, 0.2);
+      }
+      &--violet {
+        background-color: rgba(violet, 0.2);
+      }
+    }
+    &__percent {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      color: green;
+      font-weight: 500;
+      padding-right: 2.5rem;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0; 
+        height: 0; 
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid green;
+        right: 0;
+        top: 0;
+        transform: translateY(70%);
+      }
+    }
+    &__main {
+      font-size: 5.2rem;
+      font-weight: 500;
+      height: 6rem;
+      margin-bottom: 1px;
+    }
+    &.__desc {
+      margin-top: -1rem;
+    }
+  }
+}
