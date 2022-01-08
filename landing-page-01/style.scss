@@ -1,6 +1,7 @@
 $text-color-main: #1e364f;
 $text-color-blur: #5b6066;
 $background-color-button: #6c64ea;
+$font-size-small: 1.4rem;
 
 @mixin set-color-a($color) {
   color: $color;
@@ -11,6 +12,13 @@ $background-color-button: #6c64ea;
 
 body {
   color: $text-color-main;
+}
+
+.item--button {
+  @include set-color-a($text-color-main);
+  border: 2px solid $text-color-main;
+  border-radius: 1rem;
+  box-shadow: 0 3px 0 0 rgba($text-color-main, 0.3);
 }
 
 header {
@@ -31,7 +39,7 @@ header {
     @include set-color-a($text-color-main);
   }
   .menu {
-    font-size: 1.4rem;
+    font-size: $font-size-small;
     font-weight: 500;
     padding-left: 2rem;
     position: relative;
@@ -52,19 +60,10 @@ header {
       &:visited {
         color: $text-color-blur;
       }
-      &--button {
-        color: $text-color-main;
-        border: 2px solid $text-color-main;
-        border-radius: 1rem;
-        box-shadow: 0 3px 0 0 rgba($text-color-main, 0.3);
-        &:visited {
-          color: $text-color-main;
-        }
-      }
     }
   }
   .sign-in {
-    font-size: 1.4rem;
+    font-size: $font-size-small;
     font-weight: 500;
     &__item {
       padding: 1rem 1.8rem;
@@ -109,7 +108,7 @@ main {
     &__item {
       width: 23rem;
       height: 15rem;
-      border-radius: 1rem;
+      border-radius: 2rem;
       background-color: rgb(172, 188, 231);
       position: relative;
       display: flex;
@@ -150,10 +149,88 @@ main {
       font-size: 5.2rem;
       font-weight: 500;
       height: 6rem;
-      margin-bottom: 1px;
     }
-    &.__desc {
-      margin-top: -1rem;
+    &__desc {
+      font-size: $font-size-small;
+    }
+  }
+
+  .buy {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 5rem;
+    border: 2px solid #eee;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--red {
+      color: red;
+    }
+    &-ways__item {
+      padding: 0.5rem 1rem;
+      margin: 0 1rem;
+      @include set-color-a($text-color-main);
+      font-size: $font-size-small;
+      font-weight: bold;
+    }
+    &__plans {
+      margin-top: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+      width: 40rem;
+      border: 2px solid #eee;
+      border-radius: 1rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &__arrow {
+      margin: 0 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: rgba($text-color-main, 0.1);
+      border-radius: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-desc {
+      display: flex;
+      font-size: $font-size-small;
+      font-weight: bold;
+      margin-top: 4rem;
+
+      &__item {
+        display: flex;
+        padding: 0 2rem;
+        &:not(:first-child) {
+          border-left: 2px solid #eee;
+        }
+      }
+      &__title {
+        color: $text-color-blur;
+      }
+      &__cost {
+        margin-left: 1rem;
+      }
+    }
+    &__submit {
+      margin-top: 4rem;
+      padding: 1.5rem 2rem;
+      color: white;
+      background-color: $background-color-button;
+      border-radius: 1rem;
+      border: none;
+      font-weight: bold;
     }
   }
 }

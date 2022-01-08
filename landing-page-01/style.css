@@ -2,6 +2,16 @@ body {
   color: #1e364f;
 }
 
+.item--button {
+  color: #1e364f;
+  border: 2px solid #1e364f;
+  border-radius: 1rem;
+  box-shadow: 0 3px 0 0 rgba(30, 54, 79, 0.3);
+}
+.item--button:visited {
+  color: #1e364f;
+}
+
 header {
   padding: 2rem 5rem;
   display: flex;
@@ -45,15 +55,6 @@ header .menu__item {
 }
 header .menu__item:visited {
   color: #5b6066;
-}
-header .menu__item--button {
-  color: #1e364f;
-  border: 2px solid #1e364f;
-  border-radius: 1rem;
-  box-shadow: 0 3px 0 0 rgba(30, 54, 79, 0.3);
-}
-header .menu__item--button:visited {
-  color: #1e364f;
 }
 header .sign-in {
   font-size: 1.4rem;
@@ -105,7 +106,7 @@ main .price {
 main .price__item {
   width: 23rem;
   height: 15rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background-color: #acbce7;
   position: relative;
   display: flex;
@@ -146,10 +147,88 @@ main .price__main {
   font-size: 5.2rem;
   font-weight: 500;
   height: 6rem;
-  margin-bottom: 1px;
 }
-main .price.__desc {
-  margin-top: -1rem;
+main .price__desc {
+  font-size: 1.4rem;
+}
+main .buy {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 5rem;
+  border: 2px solid #eee;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .buy--red {
+  color: red;
+}
+main .buy-ways__item {
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  color: #1e364f;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+main .buy-ways__item:visited {
+  color: #1e364f;
+}
+main .buy__plans {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .buy__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  width: 40rem;
+  border: 2px solid #eee;
+  border-radius: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+main .buy__arrow {
+  margin: 0 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(30, 54, 79, 0.1);
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .buy-desc {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 4rem;
+}
+main .buy-desc__item {
+  display: flex;
+  padding: 0 2rem;
+}
+main .buy-desc__item:not(:first-child) {
+  border-left: 2px solid #eee;
+}
+main .buy-desc__title {
+  color: #5b6066;
+}
+main .buy-desc__cost {
+  margin-left: 1rem;
+}
+main .buy__submit {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  color: white;
+  background-color: #6c64ea;
+  border-radius: 1rem;
+  border: none;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
